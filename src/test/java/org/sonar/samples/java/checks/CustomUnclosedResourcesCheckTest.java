@@ -37,7 +37,7 @@ public class CustomUnclosedResourcesCheckTest {
     CustomUnclosedResourcesCheck check = new CustomUnclosedResourcesCheck();
     check.constructor = "org.sonar.custom.GenericResource";
     check.closingMethod = "org.sonar.custom.GenericResource#closeResource";
-    JavaCheckVerifier.verify("src/test/files/se/customresources/ConstructorClosedAny.java", check);
+    JavaCheckVerifier.verify("src/test/files/customresources/ConstructorClosedAny.java", check);
   }
 
   @Test
@@ -45,7 +45,7 @@ public class CustomUnclosedResourcesCheckTest {
     CustomUnclosedResourcesCheck check = new CustomUnclosedResourcesCheck();
     check.factoryMethod = "org.sonar.custom.ResourceFactory#createResource(java.lang.String)";
     check.closingMethod = "org.sonar.custom.GenericResource#closeResource(java.lang.String)";
-    JavaCheckVerifier.verify("src/test/files/se/customresources/FactoryClosed.java", check);
+    JavaCheckVerifier.verify("src/test/files/customresources/FactoryClosed.java", check);
   }
 
   @Test
@@ -53,7 +53,7 @@ public class CustomUnclosedResourcesCheckTest {
     CustomUnclosedResourcesCheck check = new CustomUnclosedResourcesCheck();
     check.factoryMethod = "org.sonar.custom.ResourceFactory#createResource";
     check.closingMethod = "org.sonar.custom.GenericResource#closeResource";
-    JavaCheckVerifier.verify("src/test/files/se/customresources/FactoryClosedAny.java", check);
+    JavaCheckVerifier.verify("src/test/files/customresources/FactoryClosedAny.java", check);
   }
 
   @Test
@@ -61,7 +61,7 @@ public class CustomUnclosedResourcesCheckTest {
     CustomUnclosedResourcesCheck check = new CustomUnclosedResourcesCheck();
     check.openingMethod = "org.sonar.custom.GenericResource#open(java.lang.String)";
     check.closingMethod = "org.sonar.custom.GenericResource#closeResource(java.lang.String)";
-    JavaCheckVerifier.verify("src/test/files/se/customresources/OpenedClosed.java", check);
+    JavaCheckVerifier.verify("src/test/files/customresources/OpenedClosed.java", check);
   }
 
   @Test
@@ -69,7 +69,7 @@ public class CustomUnclosedResourcesCheckTest {
     CustomUnclosedResourcesCheck check = new CustomUnclosedResourcesCheck();
     check.openingMethod = "org.sonar.custom.GenericResource#open";
     check.closingMethod = "org.sonar.custom.GenericResource#closeResource";
-    JavaCheckVerifier.verify("src/test/files/se/customresources/OpenedClosedAny.java", check);
+    JavaCheckVerifier.verify("src/test/files/customresources/OpenedClosedAny.java", check);
   }
 
   /**
@@ -83,7 +83,7 @@ public class CustomUnclosedResourcesCheckTest {
     CustomUnclosedResourcesCheck check2 = new CustomUnclosedResourcesCheck();
     check2.constructor = "org.sonar.custom.GenericResource(java.lang.String)";
     check2.closingMethod = "org.sonar.custom.GenericResource#closeResource(java.lang.String)";
-    JavaCheckVerifier.verify("src/test/files/se/customresources/ConstructorClosed.java", check1);
+    JavaCheckVerifier.verify("src/test/files/customresources/ConstructorClosed.java", check1);
   }
 
 }
