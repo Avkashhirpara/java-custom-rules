@@ -1,0 +1,13 @@
+{
+  "title": "This one is the custom rules, please have patients we will add some discription here",
+  "type": "BUG",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "pitfall"
+  ],
+  "defaultSeverity": "Blocker"
+}
